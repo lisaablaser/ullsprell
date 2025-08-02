@@ -1,0 +1,40 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ullsprell - Kontakt</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+   <div id="header"></div>
+
+  <main>
+    <section class="intro">
+      <h2>Kontakt</h2>
+      <p>We’d love to hear from you! Feel free to reach out with questions, custom orders, or just to say hi.</p>
+    </section>
+
+    <section class="contact-form" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+      <form id="contactForm">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+        <button type="submit" style="background-color: #a65f5f; color: white; border: none; padding: 10px 20px; border-radius: 5px;">Send</button>
+      </form>
+      <p id="formStatus" style="color: green; text-align: center; display: none; margin-top: 10px;">Thank you! We'll be in touch soon.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+</body>
+</html>
