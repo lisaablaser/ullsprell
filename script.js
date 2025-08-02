@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+   const basePath = window.location.pathname.includes("/gallery/") 
+    ? "../" 
+    : "./";
 
 
   const injectPartials = async () => {
     try {
-      const ids = [["header", "header.html"], ["footer", "footer.html"]];
+      const ids = [["header", `${basePath}header.html`], ["footer", `${basePath}footer.html`]];
       for (const [id, file] of ids) {
-        const res = await fetch(`/${file}`);
+        const res = await fetch(file);
         if (!res.ok) throw new Error(`Failed to load ${file}`);
         const html = await res.text();
         document.getElementById(id).innerHTML = html;
       }
-      // Once both are injected, show the page
       document.body.style.opacity = "1";
     } catch (err) {
       console.error(err);
-      document.body.style.opacity = "1"; // Show content even if error
+      document.body.style.opacity = "1";
     }
   };
 
